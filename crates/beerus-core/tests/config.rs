@@ -63,7 +63,7 @@ mod tests {
     #[test]
     #[should_panic]
     fn bad_config_file_panics() {
-        let goerli_file_config: Config =
+        let _bad_file_config: Config =
             Config::from_file(&PathBuf::from("tests/common/data/bad.toml"));
     }
 
@@ -72,7 +72,7 @@ mod tests {
     #[test]
     #[should_panic]
     fn missing_config_file_panics() {
-        let missing_file_config: Config =
+        let _missing_file_config: Config =
             Config::from_file(&PathBuf::from("tests/file/that/doesnt/exist.toml"));
     }
 
