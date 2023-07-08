@@ -57,6 +57,27 @@ mod tests {
         );
     }
 
+    /////////////////////////////////my addition//////////////////////////
+    /// Test `from_file` function with a bad config file.
+    /// It should fail.
+    #[test]
+    #[should_panic]
+    fn bad_config_file_panics() {
+        let goerli_file_config: Config =
+            Config::from_file(&PathBuf::from("tests/common/data/bad.toml"));
+    }
+
+    /// Test `from_file` function with missing config file.
+    /// It should fail.
+    #[test]
+    #[should_panic]
+    fn missing_config_file_panics() {
+        let missing_file_config: Config =
+            Config::from_file(&PathBuf::from("tests/file/that/doesnt/exist.toml"));
+    }
+
+    /////////////////////////////end//////////////////////////////////////
+
     /// Test `default` function.
     /// It should return the correct value.
     #[test]
