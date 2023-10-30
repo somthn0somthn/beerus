@@ -1,13 +1,13 @@
 name: continuous integration
 
-## on:
-##  schedule:
-##    - cron: "0 8 * * *"
-##  workflow_dispatch:
-##    inputs:
-##      branch:
-##        description: 'The branch to build'
-##        required: true
+# on:
+#  schedule:
+#    - cron: "0 8 * * *"
+#  workflow_dispatch:
+#    inputs:
+#      branch:
+#        description: 'The branch to build'
+#        required: true
 
 
 env:
